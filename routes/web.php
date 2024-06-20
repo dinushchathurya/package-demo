@@ -1,18 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/divisional-secretariats', [HomeController::class, 'divisionalSecretariats']);
+Route::get('/local-authorities', [HomeController::class, 'localAuthorities']);
+Route::get('/local-hospitals', [HomeController::class, 'localHospitals']);
+Route::get('/documentation', [HomeController::class, 'documentation']);
+
+Route::prefix('get')->group(function () {
+    Route::get('/faculty/university/{name}', [HomeController::class, 'getFaculties']);
+    Route::get('/degree/faculty/{name}', [HomeController::class, 'getDegrees']);
+    Route::get('/district/province/{name}', [HomeController::class, 'getDivisionalSecretariatsDistricts']);
+    Route::get('/authority/district/{name}', [HomeController::class, 'getDivisionalSecretariatAuthority']);
+    
+    Route::get('/local/district/province/{name}', [HomeController::class, 'getLocalAuthoritiesDistricts']);
+    Route::get('/local/authority/district/{name}', [HomeController::class, 'getLocalAuthoritiesAuthority']);
+    Route::get('/local/district/province/{name}', [HomeController::class, 'getLocalHospitalsDistricts']);
+    Route::get('/local/authority/district/{name}', [HomeController::class, 'getLocalHospitals']);
 });
+
+
