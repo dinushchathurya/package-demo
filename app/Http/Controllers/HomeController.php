@@ -7,6 +7,7 @@ use Devninja\University\University;
 use Dinushchathurya\Secretariat\Secretariat;
 use Dinushchathurya\Council\Council;
 use Dinushchathurya\Hospital\Hospital;
+use Dinushchathurya\Division\Division;
 
 class HomeController extends Controller
 {
@@ -77,7 +78,7 @@ class HomeController extends Controller
     }
     /* End of local authorities section */
 
-     /* Start of local authorities section */
+    /* Start of local authorities section */
     public function localHospitals()
     {
         $provinces = Hospital::getProvinces();
@@ -96,6 +97,28 @@ class HomeController extends Controller
     {
         $authority = Hospital::getHospitals($name);
         return response()->json($authority);
+    }
+    /* End of local authorities section */
+
+    /* Start of local authorities section */
+    public function gnDivisions()
+    {
+        $districts = Division::getDistricts();
+        return view('pages.gn-divisions')->with([
+            'districts' => $districts
+        ]);
+    }
+
+    public function getDivisionalSecretariats($name)
+    {
+        $secretariat = Division::getDivisionalSecretariats($name);
+        return response()->json($secretariat);
+    }
+
+    public function getDivisions($name)
+    {
+        $division = Division::getDivisions($name);
+        return response()->json($division);
     }
     /* End of local authorities section */
 

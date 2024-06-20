@@ -30,13 +30,20 @@
                 <span class="menu-item-label">Local Hospitals</span>
             </div>
         </a>
+        
+        <a href="{{ url('/gn-divisions') }}" class="br-menu-link">
+            <div class="br-menu-item">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span class="menu-item-label">GN Divisions</span>
+            </div>
+        </a>
 
-         <a href="{{ url('/documentation') }}" class="br-menu-link">
-             <div class="br-menu-item">
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <span class="menu-item-label">Documentation</span>
-             </div>
-         </a>
+        {{-- <a href="{{ url('/documentation') }}" class="br-menu-link">
+            <div class="br-menu-item">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span class="menu-item-label">Documentation</span>
+            </div>
+        </a> --}}
 
     </div>
 </div>

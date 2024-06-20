@@ -8,6 +8,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/divisional-secretariats', [HomeController::class, 'divisionalSecretariats']);
 Route::get('/local-authorities', [HomeController::class, 'localAuthorities']);
 Route::get('/local-hospitals', [HomeController::class, 'localHospitals']);
+Route::get('/gn-divisions', [HomeController::class, 'gnDivisions']);
 Route::get('/documentation', [HomeController::class, 'documentation']);
 
 Route::prefix('get')->group(function () {
@@ -20,6 +21,8 @@ Route::prefix('get')->group(function () {
     Route::get('/local/authority/district/{name}', [HomeController::class, 'getLocalAuthoritiesAuthority']);
     Route::get('/local/district/province/{name}', [HomeController::class, 'getLocalHospitalsDistricts']);
     Route::get('/local/authority/district/{name}', [HomeController::class, 'getLocalHospitals']);
+    Route::get('/local/district/{name}', [HomeController::class, 'getDivisionalSecretariats']);
+    Route::get('/local/secretariat/{name}', [HomeController::class, 'getDivisions']);
 });
 
 
