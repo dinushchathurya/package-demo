@@ -38,6 +38,13 @@
             </div>
         </a>
 
+        <a href="{{ url('/sl-mobile') }}" class="br-menu-link">
+            <div class="br-menu-item">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span class="menu-item-label">SL Mobile Validator</span>
+            </div>
+        </a>
+
         {{-- <a href="{{ url('/documentation') }}" class="br-menu-link">
             <div class="br-menu-item">
             <i class="fa fa-book" aria-hidden="true"></i>

@@ -9,6 +9,8 @@ Route::get('/divisional-secretariats', [HomeController::class, 'divisionalSecret
 Route::get('/local-authorities', [HomeController::class, 'localAuthorities']);
 Route::get('/local-hospitals', [HomeController::class, 'localHospitals']);
 Route::get('/gn-divisions', [HomeController::class, 'gnDivisions']);
+Route::get('/sl-mobile', [HomeController::class, 'srilankanMobileNumberValidation']);
+Route::post('/validate-mobile', [HomeController::class, 'validateSLMobileNumber'])->name('validate.mobile');
 Route::get('/documentation', [HomeController::class, 'documentation']);
 
 Route::prefix('get')->group(function () {

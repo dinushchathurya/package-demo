@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec5f77938f56485fd599699e59242b2f",
+    "content-hash": "4edaa41fc3d41bc99f96f57924dec04b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -406,6 +406,57 @@
                 "source": "https://github.com/dinushchathurya/srilankan-local-authorities/tree/1.0.0"
             },
             "time": "2024-06-20T11:44:16+00:00"
+        },
+        {
+            "name": "dinushchathurya/srilankan-mobile-number-validator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dinushchathurya/srilankan-mobile-number-validator.git",
+                "reference": "f3597a0d51dbd09f34d4b4ab56a22fdcc5d907be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dinushchathurya/srilankan-mobile-number-validator/zipball/f3597a0d51dbd09f34d4b4ab56a22fdcc5d907be",
+                "reference": "f3597a0d51dbd09f34d4b4ab56a22fdcc5d907be",
+                "shasum": ""
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dinushchathurya\\SrilankanMobilecodeValidator\\MobilecodeValidatorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dinushchathurya\\SrilankanMobilecodeValidator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "dinushchathurya",
+                    "email": "dinushchathurya21@gmail.com"
+                }
+            ],
+            "description": "This package validate all Sri Lanakan phone number including mobile and landline numbers.",
+            "keywords": [
+                "Mobile Number Vaidator",
+                "Mobile Number Validator SriLanka",
+                "SriLankan Mobile Number Validator",
+                "SriLankan Phone Number Validation",
+                "Srilankan Mobile Validator"
+            ],
+            "support": {
+                "issues": "https://github.com/dinushchathurya/srilankan-mobile-number-validator/issues",
+                "source": "https://github.com/dinushchathurya/srilankan-mobile-number-validator/tree/1.0.0"
+            },
+            "time": "2022-02-16T03:14:16+00:00"
         },
         {
             "name": "dinushchathurya/srilankan-state-hospitals",

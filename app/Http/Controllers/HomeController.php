@@ -122,6 +122,24 @@ class HomeController extends Controller
     }
     /* End of local authorities section */
 
+    /* Start of Sri Lankan Mobile Number Validation */
+    public function srilankanMobileNumberValidation()
+    {
+        return view('pages.mobile-number-validation');
+    }
+
+    public function validateSLMobileNumber(Request $request)
+    {
+        $request->validate([
+            'mobile' => 'required|srilankan-mobilecode'
+        ]);
+
+        return response()->json([
+            'message' => 'Mobile number is valid'
+        ]);
+    }
+    /* End of Sri Lankan Mobile Number Validation */
+
     public function documentation()
     {
         return view('pages.documentation');

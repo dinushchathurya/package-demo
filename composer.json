@@ -12,6 +12,7 @@
         "dinushchathurya/srilankan-divisional-secretariats": "^1.0",
         "dinushchathurya/srilankan-gn-divisions": "^2.0",
         "dinushchathurya/srilankan-local-authorities": "^1.0",
+        "dinushchathurya/srilankan-mobile-number-validator": "^1.0",
         "dinushchathurya/srilankan-state-hospitals": "^1.0",
         "dinushchathurya/srilankan-universities": "dev-master",
         "fideloper/proxy": "^4.4",
